@@ -1,0 +1,4 @@
+#!/bin/bash
+export PATH=$PATH:~/installations/offsetexplorer3
+export PATH=$PATH:~/installations/clion-2025.1.1/bin
+
