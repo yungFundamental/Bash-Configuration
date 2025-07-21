@@ -14,6 +14,7 @@ alias ee='extend-env'
 alias eg='env | grep'
 
 # GIT
+alias gcl='git clone'
 alias gc='git commit -m'
 alias gd='git diff'
 alias gamend='git commit --amend --no-edit'

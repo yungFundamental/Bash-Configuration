@@ -1,0 +1,8 @@
+[user]
+	mail = amit.barilai22@gmail.com
+	name = Amit Barzilai
+	email = amit.barzilai22@gmail.com
+[core]
+	editor = vim
+[url "git@github.com:"]
+	insteadOf = "gh:"
