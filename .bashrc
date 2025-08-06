@@ -128,3 +128,4 @@ fi
 # Amit configs
 eval "$(zoxide init bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(starship init bash)"
