@@ -42,3 +42,7 @@ alias ag='cat  ~/.bash_aliases | grep'
 # zoxide
 alias cd='z'
 alias cdi='zi'
+
+# bat (batcat)
+alias cat='batcat'
+
