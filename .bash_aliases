@@ -26,6 +26,7 @@ alias gl='git log --oneline'
 alias gA='git restore --staged'
 alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcl='git clone'
+alias gpl='git pull'
 alias co='git checkout'
 
 grs () {
