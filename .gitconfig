@@ -6,3 +6,5 @@
 	editor = vim
 [url "git@github.com:"]
 	insteadOf = "gh:"
+[url "git@github.com:yungFundamental/"]
+	insteadOf = "yf:"
