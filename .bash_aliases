@@ -23,10 +23,18 @@ alias gs='git status'
 alias gac='git add . && git commit -m'
 alias gca='git commit -am'
 alias gl='git log --oneline'
-alias grs='git restore --staged'
+alias gA='git restore --staged'
 alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcl='git clone'
 alias co='git checkout'
+
+grs () {
+	COMMITS_BACK=1
+	if [ $# -gt 1 ]; then
+		COMMITS_BACK=$1
+	fi
+	git reset --soft HEAD~$COMMITS_BACK
+}
 
 # Process Utils
 bg () { # Run process in background
