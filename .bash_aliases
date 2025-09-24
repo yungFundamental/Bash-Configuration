@@ -28,7 +28,6 @@ alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcl='git clone'
 alias gpl='git pull'
 alias co='git checkout'
-
 grs () {
 	COMMITS_BACK=1
 	if [ $# -gt 1 ]; then
@@ -44,6 +43,20 @@ bg () { # Run process in background
 alias nsg='netstat -tulpn | grep'
 
 
+# Finding
+superfind () {
+	if [ "$#" -eq 0 ]; then
+		echo "Usage: ${FUNCNAME[0]} <PATTERN> [DIRECTORY]"
+		return 1
+	fi
+	if [ "$#" -lt 2 ]; then
+		dir="."
+	else
+		dir="$2"
+	fi
+	grep $1 $(find $dir -type f)
+}
+
 # Alias aliases
 alias al-frsh='source ~/.bash_aliases'
 alias ag='cat  ~/.bash_aliases | grep'
@@ -55,3 +68,4 @@ alias cdi='zi'
 # bat (batcat)
 alias cat='batcat'
 
+alias explorer=nautilus
