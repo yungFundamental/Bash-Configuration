@@ -1,3 +1,4 @@
+#!/bin/bash
 # General
 alias c='clear'
 alias nv='nvim'
@@ -58,14 +59,6 @@ superfind () {
 }
 
 # Alias aliases
-alias al-frsh='source ~/.bash_aliases'
-alias ag='cat  ~/.bash_aliases | grep'
-
-# zoxide
-alias cd='z'
-alias cdi='zi'
-
-# bat (batcat)
-alias cat='batcat'
+alias ag='alias | grep'
 
 alias explorer=nautilus
