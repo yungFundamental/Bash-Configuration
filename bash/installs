@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # fzf init
 if command -v fzf &> /dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
@@ -20,3 +22,10 @@ if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
+# BatCat init
+if command -v batcat &> /dev/null; then
+  alias cat='batcat -p'
+fi
+if command -v bat &> /dev/null; then
+  alias cat='bat -p'
+fi
