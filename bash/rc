@@ -1,12 +1,6 @@
-if [ -f aliases ]; then
-    . aliases
-fi
-
-if [ -f env ]; then
-    . env
-fi
-
-if [ -f ~/.kafka_env.sh ]; then
-    . kafka_env
-fi
-
+#!/bin/bash
+source ~/Bash-Configuration/bash/aliases
+source ~/Bash-Configuration/bash/env
+source ~/Bash-Configuration/bash/installs
+source ~/Bash-Configuration/bash/kafka_env
+source ~/Bash-Configuration/bash/aliases
