@@ -1,4 +1,22 @@
-eval "$(zoxide init bash)"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval "$(starship init bash)"
+# fzf init
+if command -v fzf &> /dev/null; then
+  if [[ -f /usr/share/fzf/completion.bash ]]; then
+    source /usr/share/fzf/completion.bash
+  fi
+  if [[ -f /usr/share/fzf/key-bindings.bash ]]; then
+    source /usr/share/fzf/key-bindings.bash
+  fi
+fi
+
+# Zoxide Init
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
+  alias cd='zd'
+  alias cdi='zdi'
+fi
+
+# Starship init
+if command -v starship &> /dev/null; then
+  eval "$(starship init bash)"
+fi
 
