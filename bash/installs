@@ -14,7 +14,7 @@ fi
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
   alias cd='zd'
-  alias cdi='zdi'
+  alias cdi='zi'
 fi
 
 # Starship init
