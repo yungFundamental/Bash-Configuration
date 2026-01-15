@@ -43,6 +43,10 @@ bg () { # Run process in background
 }
 alias nsg='netstat -tulpn | grep'
 
+# Java
+alias jc='mkdir -p dst && javac -d dst $(find src -name "*.java")'
+alias jr='java -cp dst'
+
 
 # Finding
 superfind () {
