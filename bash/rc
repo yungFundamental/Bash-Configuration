@@ -1,6 +1,6 @@
 #!/bin/bash
 source ~/barzi-config/bash/aliases
 source ~/barzi-config/bash/env
-source ~/barzi-config/bash/installs
 source ~/barzi-config/bash/kafka_env
 source ~/barzi-config/bash/aliases
+source ~/barzi-config/bash/installs

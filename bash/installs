@@ -10,13 +10,6 @@ if command -v fzf &> /dev/null; then
   fi
 fi
 
-# Zoxide Init
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init bash)"
-  alias cd='zd'
-  alias cdi='zi'
-fi
-
 # Starship init
 if command -v starship &> /dev/null; then
   eval "$(starship init bash)"
@@ -29,3 +22,11 @@ fi
 if command -v bat &> /dev/null; then
   alias cat='bat -p'
 fi
+
+# Zoxide Init
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init bash)"
+  alias cd='zd'
+  alias cdi='zi'
+fi
+
