@@ -47,6 +47,12 @@ alias nsg='netstat -tulpn | grep'
 alias jc='mkdir -p dst && javac -d dst $(find src -name "*.java")'
 alias jr='java -cp dst'
 
+# Python
+VENV_FOLDER='.venv'
+alias va='. ${VENV_FOLDER}/bin/activate'
+alias vnv='python -m venv ${VENV_FOLDER} && chmod +x ${VENV_FOLDER}/bin/activate'
+alias vd='if command -v deactivate &> /dev/null; then deactivate; else echo "No active virtual environment to deactivate"; fi'
+
 
 # Finding
 superfind () {
