@@ -26,7 +26,7 @@ fi
 # Zoxide Init
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init bash)"
-  alias cd='zd'
+  alias cd='z'
   alias cdi='zi'
 fi
 
