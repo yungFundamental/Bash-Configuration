@@ -1,6 +1,6 @@
 # Barzi Configuration
 
-This project includes opinionated terminal configurations from barzi-dawg, AKA Amit Barzilai, AKA Yung Fundamental. TODO Add link
+This project includes opinionated terminal configurations from barzi-dawg, AKA Amit Barzilai, AKA [Yung Fundamental](https://github.com/yungFundamental).
 
 ## Installation
 Installation is done by pulling the repository to your directory, and adding the following line to your `.bashrc`:
