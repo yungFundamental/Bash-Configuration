@@ -4,12 +4,11 @@ alias c='clear'
 alias nv='nvim'
 alias l='ls -Al'
 
-extend-env () {
-	if [ $# -ne 2 ]
-	then
-		echo "USAGE: $0 <ENVIRONMENT VARIABLE> <VAL>"
-	fi
-	export $1="$1:$2"
+extend-env() {
+  if [ $# -ne 2 ]; then
+    echo "USAGE: $0 <ENVIRONMENT VARIABLE> <VAL>"
+  fi
+  export $1="$1:$2"
 }
 alias ee='extend-env'
 alias eg='env | grep'
@@ -29,17 +28,17 @@ alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gcl='git clone'
 alias gpl='git pull'
 alias co='git checkout'
-grs () {
-	COMMITS_BACK=1
-	if [ $# -gt 1 ]; then
-		COMMITS_BACK=$1
-	fi
-	git reset --soft HEAD~$COMMITS_BACK
+grs() {
+  COMMITS_BACK=1
+  if [ $# -gt 1 ]; then
+    COMMITS_BACK=$1
+  fi
+  git reset --soft HEAD~$COMMITS_BACK
 }
 
 # Process Utils
-bg () { # Run process in background
-	"${@:1}" > /dev/null 2&>1 &
+bg() { # Run process in background
+  "${@:1}" >/dev/null 2 &>1 &
 }
 alias nsg='netstat -tulpn | grep'
 
@@ -53,22 +52,22 @@ alias va='. ${VENV_FOLDER}/bin/activate'
 alias vnv='python -m venv ${VENV_FOLDER} && chmod +x ${VENV_FOLDER}/bin/activate'
 alias vd='if command -v deactivate &> /dev/null; then deactivate; else echo "No active virtual environment to deactivate"; fi'
 
-
 # Finding
-superfind () {
-	if [ "$#" -eq 0 ]; then
-		echo "Usage: ${FUNCNAME[0]} <PATTERN> [DIRECTORY]"
-		return 1
-	fi
-	if [ "$#" -lt 2 ]; then
-		dir="."
-	else
-		dir="$2"
-	fi
-	grep $1 $(find $dir -type f)
+superfind() {
+  if [ "$#" -eq 0 ]; then
+    echo "Usage: ${FUNCNAME[0]} <PATTERN> [DIRECTORY]"
+    return 1
+  fi
+  if [ "$#" -lt 2 ]; then
+    dir="."
+  else
+    dir="$2"
+  fi
+  grep $1 $(find $dir -type f)
 }
 
 # Alias aliases
 alias ag='alias | grep'
 
 alias explorer=nautilus
+alias open='xdg-open'
