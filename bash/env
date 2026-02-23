@@ -1,5 +1,7 @@
 #!/bin/bash
 
-export PATH="$PATH:~/.local/bin"
-
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
+export PATH
 
