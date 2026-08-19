@@ -25,7 +25,12 @@ alias gac='git add . && git commit -m'
 alias gca='git commit -am'
 alias gl='git log --oneline'
 alias gA='git restore --staged'
-alias gp='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpo='git push origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpp='git push personal $(git rev-parse --abbrev-ref HEAD)'
+gp() {
+  local remote="${1:-origin}"
+  git push "$remote" "$(git rev-parse --abbrev-ref HEAD)"
+}
 alias gcl='git clone'
 alias gpl='git pull'
 alias co='git checkout'
