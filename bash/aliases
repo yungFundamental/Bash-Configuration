@@ -28,8 +28,11 @@ alias gA='git restore --staged'
 alias gpo='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gpp='git push personal $(git rev-parse --abbrev-ref HEAD)'
 gp() {
-  local remote="${1:-origin}"
-  git push "$remote" "$(git rev-parse --abbrev-ref HEAD)"
+  if [ $# -eq 0 ]; then
+    git push
+  else
+    git push "$1" "$(git rev-parse --abbrev-ref HEAD)"
+  fi
 }
 alias gcl='git clone'
 alias gpl='git pull'
